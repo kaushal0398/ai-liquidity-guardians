@@ -93,6 +93,31 @@ contract SmartLiquidityVault {
         emit VaultEntered(msg.sender, tokenA, tokenB);
     }
 
+    function exitVault(address user, uint amountAMin, uint amountBMin) external onlyKeeper {
+        VaultConfig storage vault = vaults[user];
+        require(vault.active, "Inactive vault");
+
+        uint256 currentPrice = getLatestPrice();
+        int256 change = int256(currentPrice) - int256(vault.entryPrice);
+        int256 pctChange = (change * 100) / int256(vault.entryPrice);
+
+        if (pctChange >= vault.takeProfit || pctChange <= vault.stopLoss) {
+            vault.active = false;
+
+            (uint amountA, uint amountB) = IUniswapRouter(router).removeLiquidity(
+                vault.tokenA,
+                vault.tokenB,
+                vault.deposited,
+                amountAMin,
+                amountBMin,
+                vault.owner,
+                block.timestamp + 600
+            );
+
+            emit VaultExited(user, amountA, amountB);
+        }
+    }
+
     function reenterVault(
         address user,
         uint amountA,
