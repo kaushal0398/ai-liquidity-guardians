@@ -1,0 +1,9 @@
+{
+  "strategyName": "predictive-exit-agent",
+  "confidence": 0.84,
+  "trigger": "exit",
+  "reasoning": "Volatility exceeded 20%, 3hr downtrend signal active",
+  "action": "call exitVault()",
+  "source": "elizaOS",
+  "agentId": "ai-guard-003"
+}
