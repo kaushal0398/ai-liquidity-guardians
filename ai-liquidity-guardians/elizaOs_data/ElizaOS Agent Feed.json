@@ -1,0 +1,44 @@
+
+{
+  "market": {
+    "volatility": 0.2301,
+    "trend": "down",
+    "predictionHorizon": "2h",
+    "chainlinkPrice": 2025.57,
+    "uniswapTWAP": null,
+    "confidence": 0.73,
+    "source": null
+  },
+  "wallet": {
+    "address": "0x9A5Ef4Ff4...DeFiUser",
+    "balanceETH": 0.45,
+    "balanceUSDC": 950.00,
+    "lpTokens": 10
+  },
+  "chain": {
+    "id": 11155111,
+    "name": "Sepolia",
+    "gasPriceGwei": 18.23,
+    "mevRiskLevel": "low"
+  },
+  "agentDecision": {
+    "action": "exit",
+    "reasoning": "Volatility exceeds threshold and trend is negative.",
+    "confidence": 0.85
+  },
+  "sentiment": {
+    "timestamp": "2025-06-18T11:43:31Z",
+    "agent": "eliza-liquidity-strategist",
+    "sentimentScore": -0.65
+  },
+  "intent": {
+    "intentName": "preserve capital",
+    "userProfile": {
+      "riskTolerance": "low",
+      "preferredAssets": ["ETH", "stETH"]
+    },
+    "agentGoal": {
+      "exitEarlyIfVolatilityExceedsThresholdAndTrendIsNegative": true
+    }
+  }
+}
