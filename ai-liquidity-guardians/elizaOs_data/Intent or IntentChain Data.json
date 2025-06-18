@@ -1,0 +1,16 @@
+{
+  "intent": "preserve capital",
+  "userProfile": {
+    "riskTolerance": "low",
+    "preferredAssets": ["ETH", "stETH"]
+  },
+  "agentGoal": "exit early if volatility > 18% and trend is negative"
+}
+    "trigger": {
+        "type": "volatility",
+        "threshold": 0.18,
+        "trend": "negative",
+        "action": "exit"
+    },
+    "timestamp": "2025-06-18T11:43:31Z"
+    }
