@@ -1,0 +1,55 @@
+{
+  "timestamp": "2025-06-17T18:10:00Z",
+  "agent": "eliza-liquidity-strategist",
+  "wallet": "0x9A5Ef4Ff4...DeFiUser",
+  "chain": {
+    "id": 11155111,
+    "name": "Sepolia",
+    "gasPrice": 18.23,
+    "mevRisk": "low"
+  },
+  "vault": {
+    "tokenA": "ETH",
+    "tokenB": "USDC",
+    "lpToken": "0xUniswapLP",
+    "entryPrice": 2000.00,
+    "currentPrice": 1865.50,
+    "depositAmount": 1.0,
+    "stopLoss": -10,
+    "takeProfit": 15,
+    "autoReenter": true,
+    "active": true
+  },
+  "market": {
+    "volatility": 0.21,
+    "trend": "down",
+    "predictionHorizon": "2h",
+    "chainlinkPrice": 1865.50,
+    "uniswapTWAP": 1867.90,
+    "confidence": 0.87,
+    "source": "model-tweets-polymarket"
+  },
+  "balances": {
+    "tokenA": 0.45,
+    "tokenB": 950.00,
+    "lpTokens": 10
+  },
+  "prediction": {
+    "outlook": "exit",
+    "reasoning": "Volatility above safe bounds, downtrend confirmed.",
+    "confidence": 0.87
+  },
+  "trigger": {
+    "type": "predictive-stop-loss",
+    "execute": true
+  }
+}
+
+{
+  "timestamp": "2025-06-18T11:43:31Z",
+  "agent": "mock-oracle-stream",
+  "price": 2025.57,
+  "volatility": 0.2301,
+  "trend": "down",
+  "confidence": 0.73
+}

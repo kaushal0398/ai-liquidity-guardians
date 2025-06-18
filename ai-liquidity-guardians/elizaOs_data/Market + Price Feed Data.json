@@ -1,0 +1,13 @@
+// Used for SL/TP decisions, volatility response, MEV routing.
+
+{
+  "asset": "ETH/USDC",
+  "chainlinkPrice": 1865.50,
+  "uniswapTWAP": 1867.91,
+  "predictionHorizon": "1h",
+  "volatility": 0.21,
+  "volume24h": 92700000,
+  "trend": "down",
+  "prediction": "bearish",
+  "oracleConfidence": 0.91
+}
