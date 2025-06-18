@@ -1,0 +1,11 @@
+{
+  "source": "Twitter",
+  "sentimentScore": -0.42,
+  "keywords": ["ETH", "dump", "SEC", "recession"],
+  "volumeSpike": true,
+  "modelPrediction": "bearish",
+  "polymarketOdds": {
+    "eth_below_1800": 0.73,
+    "eth_above_2000": 0.22
+  }
+}
